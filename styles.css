@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
 body {
     padding: 0;
@@ -89,6 +90,7 @@ input[type="checkbox"]::before {
 
 .single-instruction {
     display: flex;
+    margin-top: 10px;
 }
 
 .instruction-content {
@@ -160,11 +162,25 @@ input[type="checkbox"]::before {
     text-transform: uppercase;
 }
 
-a {
+.source-link {
     font-family: 'Montserrat', sans-serif;
     color: #BDBDBD;
     text-decoration: none;
     font-style: italic;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 1em;
+}
+
+footer a {
+    text-decoration: none;
+    color: #666;
 }
 
 @media (max-width: 1450px){
@@ -255,7 +271,17 @@ a {
         font-size: 24px;
     }
 
-    a {
+    .source-link {
         font-size: 12px;
     }
+
+    footer {
+        width: 100%;
+        text-align: center;
+        font-family: 'Space Mono', monospace;
+        color: #666;
+        font-size: 12px;
+        margin-bottom: 1em;
+    }
+
 }
