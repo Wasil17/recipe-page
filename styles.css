@@ -72,7 +72,15 @@ body {
     display: inline-block;
     border: 1px solid #828282;
     border-radius: 4px;
-    
+}
+
+input[type="checkbox"]::before {
+    content: '';
+    width: 21px;
+    height: 21px;
+    border: 1px solid #828282;
+    outline: none;
+    border-radius: 4px;
 }
 
 .instructions {
@@ -110,7 +118,7 @@ body {
 }
 
 .tile {
-    width: 15vw;
+    width: 12vw;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     height: 315px;
@@ -120,7 +128,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin: 2.5rem 2rem;
+    margin: 2.5rem 1vw 2.5rem 2vw;
 }
 
 .utils-icon i {
@@ -156,4 +164,98 @@ a {
     font-family: 'Montserrat', sans-serif;
     color: #BDBDBD;
     text-decoration: none;
+    font-style: italic;
+}
+
+@media (max-width: 1450px){
+    .tile {
+        width: 15vw;
+    }
+}
+
+@media (max-width: 1200px){
+    .tile {
+        width: 20vw;
+    }
+
+    .wrapper {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .container-left {
+        width: 100%;
+    }
+
+    .container-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tile {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .tile-time-info-container {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .tile-servings-info-container {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .tile-item {
+        margin: 1rem auto 1rem 0;
+    }
+}
+
+@media (max-width: 812px) {
+    .main-heading {
+        font-size: 24px;
+    }
+
+    .main-subheading {
+        font-size: 12px;
+    }
+
+    .tile-text-header {
+        font-size: 8px;
+    }
+
+    .tile-text-sub {
+        font-size: 10px;
+    }
+
+    .ingredients-heading {
+        font-size: 18px;
+    }
+
+    .ingredients-title {
+        font-size: 16px;
+    }
+
+    .ingredients-item {
+        font-size: 14px;
+    }
+
+    .instruction-content {
+        font-size: 16px;
+    }
+
+    .instruction-heading {
+        font-size: 24px;
+    }
+
+    a {
+        font-size: 12px;
+    }
 }
