@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 body {
     padding: 0;
@@ -56,7 +56,6 @@ body {
 
 .ingredients-item {
     display: flex;
-    margin: 10px 0;
 }
 
 .ingredients-item-text {
@@ -67,21 +66,53 @@ body {
     margin-left: 10px;
 }
 
-.checkbox {
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 0;
+    user-select: none;
+}
+
+input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 21px;
     height: 21px;
-    display: inline-block;
     border: 1px solid #828282;
+    background: white;
     border-radius: 4px;
 }
 
-input[type="checkbox"]::before {
-    content: '';
+input[type="checkbox"]:checked + label::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 21px;
     height: 21px;
-    border: 1px solid #828282;
-    outline: none;
-    border-radius: 4px;
+    border: 1px solid #F2994A;
+    background: #F2994A;
+}
+
+input[type="checkbox"]:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 9px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    background-color: #F2994A;
+    transform: rotate(45deg);
 }
 
 .instructions {
@@ -107,7 +138,6 @@ input[type="checkbox"]::before {
     display: grid;
     border-radius: 6px;
     place-items: center;
-    /* font-family: 'Playfair Display', serif; */
     color: white;
     font-size: 24px;
     font-weight: bold;
